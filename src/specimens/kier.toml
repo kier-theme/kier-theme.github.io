@@ -1,0 +1,46 @@
+# Kier Groove — Ghostty
+# Generated from core/palette/kier.json. Do not edit by hand.
+
+[theme]
+name = "Kier Groove"
+reference = "\"Groove Is in the Heart\" (1990)"
+dark = true
+version = "1.0.0"
+
+[colors]
+background = "@n:base@"
+foreground = "@n:text@"
+cursor-color = "@u:cursor@"
+selection-background = "@u:selection@"
+selection-foreground = "@n:text@"
+
+[colors.palette]
+# black, red, green, yellow, blue, magenta, cyan, white
+normal = ["@x:black@", "@x:red@", "@x:green@", "@x:yellow@", "@x:blue@", "@x:magenta@", "@x:cyan@", "@x:white@"]
+bright = ["@x:bright_black@", "@x:bright_red@", "@x:bright_green@", "@x:bright_yellow@", "@x:bright_blue@", "@x:bright_magenta@", "@x:bright_cyan@", "@x:bright_white@"]
+
+[font]
+family = "IBM Plex Mono"
+size = 13.5
+thicken = false
+feature = ["-liga", "-calt"]
+
+[window]
+padding-x = 14
+padding-y = 10
+decoration = "server"
+theme = "dark"
+inherit-working-directory = true
+
+[[keybind]]
+trigger = "ctrl+shift+t"
+action = "new_tab"
+
+[[keybind]]
+trigger = "ctrl+shift+enter"
+action = "new_split:right"
+
+[audit]
+# Every accent clears this against `base`; validate.py is the gate.
+contrast-floor = 5.0
+min-perceptual-separation = 0.078

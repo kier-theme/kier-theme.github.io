@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en" data-flavour="groove">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kier — a warm retro dark theme in five flavours</title>
+<meta name="description" content="Kier is a warm, retro dark theme in five flavours — Groove, Clique, Dewdrop, Infinity and Runaway — named for Lady Miss Kier of Deee-Lite. 58 syntax roles, 19 ports, every accent above 5.0:1.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="kier.css">
+<link rel="stylesheet" href="site.css">
+<script src="palette.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-word">Kier</span>
+    </a>
+
+    <div class="switcher" role="group" aria-label="Flavour">
+      <button class="pill" type="button" aria-pressed="false" data-flavour="groove" id="pill-groove" title="&quot;Groove Is in the Heart&quot; (1990)"><span class="pill-dot" aria-hidden="true"></span><span class="pill-name">Groove</span></button>
+      <button class="pill" type="button" aria-pressed="false" data-flavour="clique" id="pill-clique" title="World Clique (1990)"><span class="pill-dot" aria-hidden="true"></span><span class="pill-name">Clique</span></button>
+      <button class="pill" type="button" aria-pressed="false" data-flavour="dewdrop" id="pill-dewdrop" title="Dewdrops in the Garden (1994)"><span class="pill-dot" aria-hidden="true"></span><span class="pill-name">Dewdrop</span></button>
+      <button class="pill" type="button" aria-pressed="false" data-flavour="infinity" id="pill-infinity" title="Infinity Within (1992)"><span class="pill-dot" aria-hidden="true"></span><span class="pill-name">Infinity</span></button>
+      <button class="pill" type="button" aria-pressed="false" data-flavour="runaway" id="pill-runaway" title="&quot;Runaway&quot; (1992)"><span class="pill-dot" aria-hidden="true"></span><span class="pill-name">Runaway</span></button>
+    </div>
+
+    <nav class="topnav" aria-label="Sections">
+      <a href="#palette">Palette</a>
+      <a href="#syntax">Syntax</a>
+      <a href="#story">Story</a>
+      <a href="#craft">Craft</a>
+      <a href="#ports">Ports</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ── hero ────────────────────────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <svg class="disc" viewBox="-140 -140 280 280" aria-hidden="true" focusable="false">
+    <g class="disc-spin">
+      <path class="wedge" data-accent="blush" d="M 0.00 -100.00 A 100.0 100.0 0 0 1 47.26 -88.13 L 16.07 -29.96 A 34.0 34.0 0 0 0 0.00 -34.00 Z"></path>
+      <path class="wedge" data-accent="cherry" d="M 50.00 -86.60 A 100.0 100.0 0 0 1 84.99 -52.70 L 28.90 -17.92 A 34.0 34.0 0 0 0 17.00 -29.44 Z"></path>
+      <path class="wedge" data-accent="coral" d="M 86.60 -50.00 A 100.0 100.0 0 0 1 99.95 -3.14 L 33.98 -1.07 A 34.0 34.0 0 0 0 29.44 -17.00 Z"></path>
+      <path class="wedge" data-accent="tangerine" d="M 100.00 0.00 A 100.0 100.0 0 0 1 88.13 47.26 L 29.96 16.07 A 34.0 34.0 0 0 0 34.00 0.00 Z"></path>
+      <path class="wedge" data-accent="amber" d="M 86.60 50.00 A 100.0 100.0 0 0 1 52.70 84.99 L 17.92 28.90 A 34.0 34.0 0 0 0 29.44 17.00 Z"></path>
+      <path class="wedge" data-accent="brass" d="M 50.00 86.60 A 100.0 100.0 0 0 1 3.14 99.95 L 1.07 33.98 A 34.0 34.0 0 0 0 17.00 29.44 Z"></path>
+      <path class="wedge" data-accent="avocado" d="M 0.00 100.00 A 100.0 100.0 0 0 1 -47.26 88.13 L -16.07 29.96 A 34.0 34.0 0 0 0 0.00 34.00 Z"></path>
+      <path class="wedge" data-accent="moss" d="M -50.00 86.60 A 100.0 100.0 0 0 1 -84.99 52.70 L -28.90 17.92 A 34.0 34.0 0 0 0 -17.00 29.44 Z"></path>
+      <path class="wedge" data-accent="lagoon" d="M -86.60 50.00 A 100.0 100.0 0 0 1 -99.95 3.14 L -33.98 1.07 A 34.0 34.0 0 0 0 -29.44 17.00 Z"></path>
+      <path class="wedge" data-accent="denim" d="M -100.00 0.00 A 100.0 100.0 0 0 1 -88.13 -47.26 L -29.96 -16.07 A 34.0 34.0 0 0 0 -34.00 0.00 Z"></path>
+      <path class="wedge" data-accent="iris" d="M -86.60 -50.00 A 100.0 100.0 0 0 1 -52.70 -84.99 L -17.92 -28.90 A 34.0 34.0 0 0 0 -29.44 -17.00 Z"></path>
+      <path class="wedge" data-accent="plum" d="M -50.00 -86.60 A 100.0 100.0 0 0 1 -3.14 -99.95 L -1.07 -33.98 A 34.0 34.0 0 0 0 -17.00 -29.44 Z"></path>
+    </g>
+  </svg>
+
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        5 flavours · 12 accents · one palette file
+      </p>
+      <h1 class="hero-title">Kier</h1>
+      <p class="hero-sub">
+        A warm retro dark theme for people who look at text all day.
+        Grounds lifted from five hand-tuned desktop themes, an accent set with a
+        1970s vocabulary, and 58 syntax roles that hold together
+        because the numbers say so.
+      </p>
+      <p class="hero-now">
+        Now showing <strong class="hero-flavour" data-bind="name">Groove</strong>
+        — <span data-bind="reference">"Groove Is in the Heart" (1990)</span>.
+        <span class="hero-blurb" data-bind="blurb"></span>
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="#ports">Get a port <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#palette">Read the palette</a>
+      </div>
+      <p class="hero-hint">
+        Press <kbd>1</kbd>–<kbd>5</kbd> to change flavour.
+      </p>
+    </div>
+
+    <div class="hero-code">
+      <div class="win">
+        <div class="win-bar">
+          <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="win-title">flavour.rs</span>
+          <span class="win-tag" data-bind="name">Groove</span>
+        </div>
+        <div class="scroll-x">
+<pre class="code code-hero"><code><span class="cl"><span class="t-comment-doc">//! Resolve a Kier flavour from `kier.json` into a concrete theme.</span></span>
+<span class="cl"><span class="t-keyword-import">use</span> <span class="t-namespace">std</span><span class="t-punctuation">::</span><span class="t-namespace">collections</span><span class="t-punctuation">::</span><span class="t-type">BTreeMap</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"><span class="t-keyword-import">use</span> <span class="t-namespace">std</span><span class="t-punctuation">::</span><span class="t-variable-member">fmt</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-comment-doc">/// Every accent clears 5.0:1 against its own `base`.</span></span>
+<span class="cl"><span class="t-storage">const</span> <span class="t-constant">CONTRAST_FLOOR</span>: <span class="t-type-builtin">f64</span> <span class="t-operator">=</span> <span class="t-number">5.0</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-attribute">#[derive(</span><span class="t-type">Debug</span><span class="t-attribute">, </span><span class="t-type">Clone</span><span class="t-attribute">, </span><span class="t-type">PartialEq</span><span class="t-attribute">)]</span></span>
+<span class="cl"><span class="t-keyword">pub</span> <span class="t-storage">enum</span> <span class="t-type">Ground</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">    <span class="t-type">Crust</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-type">Mantle</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-type">Base</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-constructor">Surface</span><span class="t-punctuation-bracket">(</span><span class="t-type-builtin">u8</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword">pub</span> <span class="t-storage">struct</span> <span class="t-type">Flavour</span><span class="t-operator">&lt;</span><span class="t-label">'a</span><span class="t-operator">&gt;</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">    <span class="t-keyword">pub</span> <span class="t-variable">id</span>: <span class="t-operator">&amp;</span><span class="t-label">'a</span> <span class="t-type-builtin">str</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-keyword">pub</span> <span class="t-variable">name</span>: <span class="t-operator">&amp;</span><span class="t-label">'a</span> <span class="t-type-builtin">str</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-variable">neutrals</span>: <span class="t-type">BTreeMap</span><span class="t-operator">&lt;</span><span class="t-type">String</span><span class="t-punctuation-delimiter">,</span> <span class="t-type">Rgb</span><span class="t-operator">&gt;</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-variable">accents</span>: <span class="t-type">BTreeMap</span><span class="t-operator">&lt;</span><span class="t-type">String</span><span class="t-punctuation-delimiter">,</span> <span class="t-type">Rgb</span><span class="t-operator">&gt;</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span></code></pre>
+        </div>
+        <div class="win-status">
+          <span class="ws-mode">NORMAL</span>
+          <span class="ws-branch">kier/core</span>
+          <span class="ws-spacer"></span>
+          <span class="ws-meta" data-bind="contrastLine">text 12.0:1 on base</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── flavours ────────────────────────────────────────────────────────── -->
+<section class="section" id="flavours">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">The 5</p>
+      <h2>Same bones, five moods</h2>
+      <p class="lede">
+        Every flavour ships the same 12 neutrals, 12 accents
+        and 58 roles. What changes is the ground you sit them on and
+        how hard the signature accent pushes.
+      </p>
+    </div>
+    <div class="fcards">
+      <button class="fcard" type="button" data-flavour="groove">
+        <span class="fcard-strip" aria-hidden="true"></span>
+        <span class="fcard-body">
+          <span class="fcard-name">Groove</span>
+          <span class="fcard-ref">&quot;Groove Is in the Heart&quot; (1990)</span>
+          <span class="fcard-blurb">The anthem. Hardest contrast, purest orange, nothing held back.</span>
+        </span>
+      </button>
+      <button class="fcard" type="button" data-flavour="clique">
+        <span class="fcard-strip" aria-hidden="true"></span>
+        <span class="fcard-body">
+          <span class="fcard-name">Clique</span>
+          <span class="fcard-ref">World Clique (1990)</span>
+          <span class="fcard-blurb">The debut. Deep oxide over the darkest ground in the set.</span>
+        </span>
+      </button>
+      <button class="fcard" type="button" data-flavour="dewdrop">
+        <span class="fcard-strip" aria-hidden="true"></span>
+        <span class="fcard-body">
+          <span class="fcard-name">Dewdrop</span>
+          <span class="fcard-ref">Dewdrops in the Garden (1994)</span>
+          <span class="fcard-blurb">Soft, warm and fully resolved. The gentlest of the five.</span>
+        </span>
+      </button>
+      <button class="fcard" type="button" data-flavour="infinity">
+        <span class="fcard-strip" aria-hidden="true"></span>
+        <span class="fcard-body">
+          <span class="fcard-name">Infinity</span>
+          <span class="fcard-ref">Infinity Within (1992)</span>
+          <span class="fcard-blurb">Cool grey ground, warm accent. Contrast by temperature, not brightness.</span>
+        </span>
+      </button>
+      <button class="fcard" type="button" data-flavour="runaway">
+        <span class="fcard-strip" aria-hidden="true"></span>
+        <span class="fcard-body">
+          <span class="fcard-name">Runaway</span>
+          <span class="fcard-ref">&quot;Runaway&quot; (1992)</span>
+          <span class="fcard-blurb">Colour runs from the interface. Only the signal stays lit.</span>
+        </span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ── palette ─────────────────────────────────────────────────────────── -->
+<section class="section" id="palette">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Palette</p>
+      <h2><span data-bind="name">Groove</span>, all 12 + 12 of it</h2>
+      <p class="lede">
+        Click any swatch to copy its hex. Accent ratios are measured against this
+        flavour's own <code>base</code> — every one of them clears
+        <strong>5.0:1</strong>, which is why any accent is safe as code text.
+      </p>
+    </div>
+
+    <h3 class="grid-title">Neutrals <span class="grid-note">crust → text</span></h3>
+    <div class="swatches" id="neutral-grid"></div>
+
+    <h3 class="grid-title">Accents <span class="grid-note">1970s revival vocabulary</span></h3>
+    <div class="swatches" id="accent-grid"></div>
+
+    <h3 class="grid-title">ANSI 16 <span class="grid-note">terminal ports use this directly</span></h3>
+    <div class="ansi" id="ansi-grid"></div>
+  </div>
+</section>
+
+<!-- ── syntax ──────────────────────────────────────────────────────────── -->
+<section class="section section-alt" id="syntax">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Syntax</p>
+      <h2>Real code, real roles</h2>
+      <p class="lede">
+        Nothing below is a screenshot and nothing is hand-coloured. The samples
+        are tokenized at build time into the same 58 role names the ports
+        use, then painted from <code>kier.json</code>. Change flavour and it repaints.
+      </p>
+    </div>
+
+    <div class="spec">
+      <div class="stabs" role="tablist" aria-label="Language">
+        <button class="stab" type="button" role="tab" aria-selected="true" aria-controls="spec-rust" id="stab-rust" data-spec="rust"><span class="stab-label">Rust</span><span class="stab-file">flavour.rs</span></button>
+        <button class="stab" type="button" role="tab" aria-selected="false" aria-controls="spec-typescript" id="stab-typescript" data-spec="typescript"><span class="stab-label">TypeScript</span><span class="stab-file">palette.ts</span></button>
+        <button class="stab" type="button" role="tab" aria-selected="false" aria-controls="spec-python" id="stab-python" data-spec="python"><span class="stab-label">Python</span><span class="stab-file">build_theme.py</span></button>
+        <button class="stab" type="button" role="tab" aria-selected="false" aria-controls="spec-toml" id="stab-toml" data-spec="toml"><span class="stab-label">TOML</span><span class="stab-file">kier.toml</span></button>
+      </div>
+      <div class="spanel" id="spec-rust" role="tabpanel"
+           aria-labelledby="stab-rust">
+        <div class="scroll-x">
+<pre class="code"><code><span class="cl"><span class="t-comment-doc">//! Resolve a Kier flavour from `kier.json` into a concrete theme.</span></span>
+<span class="cl"><span class="t-keyword-import">use</span> <span class="t-namespace">std</span><span class="t-punctuation">::</span><span class="t-namespace">collections</span><span class="t-punctuation">::</span><span class="t-type">BTreeMap</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"><span class="t-keyword-import">use</span> <span class="t-namespace">std</span><span class="t-punctuation">::</span><span class="t-variable-member">fmt</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-comment-doc">/// Every accent clears 5.0:1 against its own `base`.</span></span>
+<span class="cl"><span class="t-storage">const</span> <span class="t-constant">CONTRAST_FLOOR</span>: <span class="t-type-builtin">f64</span> <span class="t-operator">=</span> <span class="t-number">5.0</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-attribute">#[derive(</span><span class="t-type">Debug</span><span class="t-attribute">, </span><span class="t-type">Clone</span><span class="t-attribute">, </span><span class="t-type">PartialEq</span><span class="t-attribute">)]</span></span>
+<span class="cl"><span class="t-keyword">pub</span> <span class="t-storage">enum</span> <span class="t-type">Ground</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">    <span class="t-type">Crust</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-type">Mantle</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-type">Base</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-constructor">Surface</span><span class="t-punctuation-bracket">(</span><span class="t-type-builtin">u8</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword">pub</span> <span class="t-storage">struct</span> <span class="t-type">Flavour</span><span class="t-operator">&lt;</span><span class="t-label">'a</span><span class="t-operator">&gt;</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">    <span class="t-keyword">pub</span> <span class="t-variable">id</span>: <span class="t-operator">&amp;</span><span class="t-label">'a</span> <span class="t-type-builtin">str</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-keyword">pub</span> <span class="t-variable">name</span>: <span class="t-operator">&amp;</span><span class="t-label">'a</span> <span class="t-type-builtin">str</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-variable">neutrals</span>: <span class="t-type">BTreeMap</span><span class="t-operator">&lt;</span><span class="t-type">String</span><span class="t-punctuation-delimiter">,</span> <span class="t-type">Rgb</span><span class="t-operator">&gt;</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">    <span class="t-variable">accents</span>: <span class="t-type">BTreeMap</span><span class="t-operator">&lt;</span><span class="t-type">String</span><span class="t-punctuation-delimiter">,</span> <span class="t-type">Rgb</span><span class="t-operator">&gt;</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword">impl</span><span class="t-operator">&lt;</span><span class="t-label">'a</span><span class="t-operator">&gt;</span> <span class="t-type">Flavour</span><span class="t-operator">&lt;</span><span class="t-label">'a</span><span class="t-operator">&gt;</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">    <span class="t-comment-doc">/// Look a role up, falling through declared aliases before giving up.</span></span>
+<span class="cl">    <span class="t-keyword">pub</span> <span class="t-keyword">fn</span> <span class="t-function">role</span><span class="t-punctuation-bracket">(</span><span class="t-operator">&amp;</span><span class="t-variable-builtin">self</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable-parameter">role</span>: <span class="t-operator">&amp;</span><span class="t-type-builtin">str</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable-parameter">aliases</span>: <span class="t-operator">&amp;</span><span class="t-punctuation-bracket">[</span><span class="t-punctuation-bracket">(</span><span class="t-operator">&amp;</span><span class="t-type-builtin">str</span><span class="t-punctuation-delimiter">,</span> <span class="t-operator">&amp;</span><span class="t-type-builtin">str</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-type">Option</span><span class="t-operator">&lt;&amp;</span><span class="t-type">Rgb</span><span class="t-operator">&gt;</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">        <span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">accents</span><span class="t-punctuation">.</span><span class="t-function-method">get</span><span class="t-punctuation-bracket">(</span><span class="t-variable">role</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">.</span><span class="t-function-method">or_else</span><span class="t-punctuation-bracket">(</span><span class="t-operator">||</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">            <span class="t-variable">aliases</span></span>
+<span class="cl">                <span class="t-punctuation">.</span><span class="t-function-method">iter</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">                <span class="t-punctuation">.</span><span class="t-function-method">find</span><span class="t-punctuation-bracket">(</span><span class="t-operator">|</span><span class="t-punctuation-bracket">(</span><span class="t-variable">from</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">_</span><span class="t-punctuation-bracket">)</span><span class="t-operator">|</span> <span class="t-operator">*</span><span class="t-variable">from</span> <span class="t-operator">==</span> <span class="t-variable">role</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">                <span class="t-punctuation">.</span><span class="t-function-method">and_then</span><span class="t-punctuation-bracket">(</span><span class="t-operator">|</span><span class="t-punctuation-bracket">(</span><span class="t-variable">_</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">to</span><span class="t-punctuation-bracket">)</span><span class="t-operator">|</span> <span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">accents</span><span class="t-punctuation">.</span><span class="t-function-method">get</span><span class="t-punctuation-bracket">(</span><span class="t-operator">*</span><span class="t-variable">to</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">        <span class="t-punctuation-bracket">}</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">    <span class="t-punctuation-bracket">}</span></span>
+<span class="cl"></span>
+<span class="cl">    <span class="t-keyword">pub</span> <span class="t-keyword">fn</span> <span class="t-function">audit</span><span class="t-punctuation-bracket">(</span><span class="t-operator">&amp;</span><span class="t-variable-builtin">self</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-constructor">Result</span><span class="t-operator">&lt;</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span> <span class="t-type">AuditError</span><span class="t-operator">&gt;</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">        <span class="t-keyword">let</span> <span class="t-variable">base</span> <span class="t-operator">=</span> <span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">neutrals</span><span class="t-punctuation">.</span><span class="t-function-method">get</span><span class="t-punctuation-bracket">(</span><span class="t-string">"base"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">.</span><span class="t-function-method">ok_or</span><span class="t-punctuation-bracket">(</span><span class="t-type">AuditError</span><span class="t-punctuation">::</span><span class="t-type">MissingBase</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">?</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">        <span class="t-keyword-control">for</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">token</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">colour</span><span class="t-punctuation-bracket">)</span> <span class="t-keyword-control">in</span> <span class="t-operator">&amp;</span><span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">accents</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">            <span class="t-keyword">let</span> <span class="t-variable">ratio</span> <span class="t-operator">=</span> <span class="t-function">contrast</span><span class="t-punctuation-bracket">(</span><span class="t-variable">colour</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">base</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">            <span class="t-keyword-control">if</span> <span class="t-variable">ratio</span> <span class="t-operator">&lt;</span> <span class="t-constant">CONTRAST_FLOOR</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">                <span class="t-keyword-control">return</span> <span class="t-constructor">Err</span><span class="t-punctuation-bracket">(</span><span class="t-type">AuditError</span><span class="t-punctuation">::</span><span class="t-type">TooDim</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">                    <span class="t-variable">token</span>: <span class="t-variable">token</span><span class="t-punctuation">.</span><span class="t-function-method">clone</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">                    <span class="t-variable">ratio</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">                <span class="t-punctuation-bracket">}</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">            <span class="t-punctuation-bracket">}</span></span>
+<span class="cl">        <span class="t-punctuation-bracket">}</span></span>
+<span class="cl">        <span class="t-constructor">Ok</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">    <span class="t-punctuation-bracket">}</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword">fn</span> <span class="t-function">contrast</span><span class="t-punctuation-bracket">(</span><span class="t-variable">fg</span>: <span class="t-operator">&amp;</span><span class="t-type">Rgb</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable-parameter">bg</span>: <span class="t-operator">&amp;</span><span class="t-type">Rgb</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-type-builtin">f64</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">    <span class="t-keyword">let</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">a</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">b</span><span class="t-punctuation-bracket">)</span> <span class="t-operator">=</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">fg</span><span class="t-punctuation">.</span><span class="t-function-method">luminance</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">bg</span><span class="t-punctuation">.</span><span class="t-function-method">luminance</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">    <span class="t-keyword">let</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">hi</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">lo</span><span class="t-punctuation-bracket">)</span> <span class="t-operator">=</span> <span class="t-keyword-control">if</span> <span class="t-variable">a</span> <span class="t-operator">&gt;</span> <span class="t-variable">b</span> <span class="t-punctuation-bracket">{</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">a</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">b</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation-bracket">}</span> <span class="t-keyword-control">else</span> <span class="t-punctuation-bracket">{</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">b</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">a</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation-bracket">}</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">    <span class="t-punctuation-bracket">(</span><span class="t-variable">hi</span> <span class="t-operator">+</span> <span class="t-number">0.05</span><span class="t-punctuation-bracket">)</span> <span class="t-operator">/</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">lo</span> <span class="t-operator">+</span> <span class="t-number">0.05</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword">impl</span> <span class="t-namespace">fmt</span><span class="t-punctuation">::</span><span class="t-type">Display</span> <span class="t-keyword-control">for</span> <span class="t-type">Ground</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">    <span class="t-keyword">fn</span> <span class="t-function">fmt</span><span class="t-punctuation-bracket">(</span><span class="t-operator">&amp;</span><span class="t-variable-builtin">self</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable-parameter">f</span>: <span class="t-operator">&amp;</span><span class="t-keyword">mut</span> <span class="t-namespace">fmt</span><span class="t-punctuation">::</span><span class="t-type">Formatter</span><span class="t-operator">&lt;</span><span class="t-label">'_</span><span class="t-operator">&gt;</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-namespace">fmt</span><span class="t-punctuation">::</span><span class="t-type">Result</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">        <span class="t-keyword-control">match</span> <span class="t-variable-builtin">self</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">            <span class="t-type">Ground</span><span class="t-punctuation">::</span><span class="t-constructor">Surface</span><span class="t-punctuation-bracket">(</span><span class="t-variable">n</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">=&gt;</span> <span class="t-function-macro">write!</span><span class="t-punctuation-bracket">(</span><span class="t-variable">f</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"surface{n}"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">            <span class="t-variable">other</span> <span class="t-punctuation">=&gt;</span> <span class="t-function-macro">write!</span><span class="t-punctuation-bracket">(</span><span class="t-variable">f</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"{}"</span><span class="t-punctuation-delimiter">,</span> <span class="t-function-macro">format!</span><span class="t-punctuation-bracket">(</span><span class="t-string">"{other:?}"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">.</span><span class="t-function-method">to_lowercase</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">        <span class="t-punctuation-bracket">}</span></span>
+<span class="cl">    <span class="t-punctuation-bracket">}</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span></code></pre>
+        </div>
+      </div>
+      <div class="spanel" id="spec-typescript" role="tabpanel"
+           aria-labelledby="stab-typescript" hidden>
+        <div class="scroll-x">
+<pre class="code"><code><span class="cl"><span class="t-comment-doc">/**</span></span>
+<span class="cl"><span class="t-comment-doc"> * Kier — load a flavour and hand back CSS custom properties.</span></span>
+<span class="cl"><span class="t-comment-doc"> * The palette is the single source of truth; nothing here invents a colour.</span></span>
+<span class="cl"><span class="t-comment-doc"> */</span></span>
+<span class="cl"><span class="t-keyword-import">import</span> <span class="t-punctuation-bracket">{</span> <span class="t-variable">readFile</span> <span class="t-punctuation-bracket">}</span> <span class="t-keyword-import">from</span> <span class="t-string">"node:fs/promises"</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword-import">export</span> <span class="t-storage">type</span> <span class="t-type">FlavourId</span> <span class="t-operator">=</span> <span class="t-string">"groove"</span> <span class="t-operator">|</span> <span class="t-string">"clique"</span> <span class="t-operator">|</span> <span class="t-string">"dewdrop"</span> <span class="t-operator">|</span> <span class="t-string">"infinity"</span> <span class="t-operator">|</span> <span class="t-string">"runaway"</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword-import">export</span> <span class="t-storage">interface</span> <span class="t-type">SyntaxRole</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">  <span class="t-storage">readonly</span> <span class="t-property">color</span><span class="t-punctuation">:</span> <span class="t-type-builtin">string</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-storage">readonly</span> <span class="t-property">token</span><span class="t-punctuation">:</span> <span class="t-type-builtin">string</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-storage">readonly</span> <span class="t-property">style</span><span class="t-punctuation">?</span><span class="t-punctuation">:</span> <span class="t-string">"italic"</span> <span class="t-operator">|</span> <span class="t-string">"bold"</span> <span class="t-operator">|</span> <span class="t-string">"underline"</span> <span class="t-operator">|</span> <span class="t-string">"strikethrough"</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-storage">interface</span> <span class="t-type">Flavour</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">  <span class="t-property">id</span><span class="t-punctuation">:</span> <span class="t-type">FlavourId</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-property">name</span><span class="t-punctuation">:</span> <span class="t-type-builtin">string</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-property">neutrals</span><span class="t-punctuation">:</span> <span class="t-type-builtin">Record</span><span class="t-operator">&lt;</span><span class="t-type-builtin">string</span><span class="t-punctuation-delimiter">,</span> <span class="t-type-builtin">string</span><span class="t-operator">&gt;</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-property">accents</span><span class="t-punctuation">:</span> <span class="t-type-builtin">Record</span><span class="t-operator">&lt;</span><span class="t-type-builtin">string</span><span class="t-punctuation-delimiter">,</span> <span class="t-type-builtin">string</span><span class="t-operator">&gt;</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-property">syntax</span><span class="t-punctuation">:</span> <span class="t-type-builtin">Record</span><span class="t-operator">&lt;</span><span class="t-type-builtin">string</span><span class="t-punctuation-delimiter">,</span> <span class="t-type">SyntaxRole</span><span class="t-operator">&gt;</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-storage">const</span> <span class="t-constant">CONTRAST_FLOOR</span> <span class="t-operator">=</span> <span class="t-number">5.0</span> <span class="t-keyword">as</span> <span class="t-storage">const</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword-import">export</span> <span class="t-keyword">async</span> <span class="t-keyword">function</span> <span class="t-function">loadPalette</span><span class="t-punctuation-bracket">(</span><span class="t-variable">path</span> <span class="t-operator">=</span> <span class="t-string">"core/palette/kier.json"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">:</span> <span class="t-type-builtin">Promise</span><span class="t-operator">&lt;</span><span class="t-type">Palette</span><span class="t-operator">&gt;</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">  <span class="t-storage">const</span> <span class="t-variable">raw</span> <span class="t-operator">=</span> <span class="t-keyword-control">await</span> <span class="t-function">readFile</span><span class="t-punctuation-bracket">(</span><span class="t-variable">path</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"utf8"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-storage">const</span> <span class="t-variable">parsed</span> <span class="t-operator">=</span> <span class="t-constant">JSON</span><span class="t-punctuation">.</span><span class="t-function-method">parse</span><span class="t-punctuation-bracket">(</span><span class="t-variable">raw</span><span class="t-punctuation-bracket">)</span> <span class="t-keyword">as</span> <span class="t-type">Palette</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-keyword-control">if</span> <span class="t-punctuation-bracket">(</span><span class="t-operator">!</span><span class="t-variable">parsed</span><span class="t-punctuation">.</span><span class="t-variable-member">flavours</span><span class="t-punctuation-bracket">)</span> <span class="t-keyword-control">throw</span> <span class="t-keyword">new</span> <span class="t-constructor">TypeError</span><span class="t-punctuation-bracket">(</span><span class="t-string">`no flavours in ${path}`</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-keyword-control">return</span> <span class="t-variable">parsed</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword-import">export</span> <span class="t-keyword">function</span> <span class="t-function">toCustomProperties</span><span class="t-punctuation-bracket">(</span><span class="t-property">flavour</span><span class="t-punctuation">:</span> <span class="t-type">Flavour</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">:</span> <span class="t-type-builtin">string</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">  <span class="t-storage">const</span> <span class="t-property">lines</span><span class="t-punctuation">:</span> <span class="t-type-builtin">string</span><span class="t-punctuation-bracket">[</span><span class="t-punctuation-bracket">]</span> <span class="t-operator">=</span> <span class="t-punctuation-bracket">[</span><span class="t-string">`:root[data-flavour="${flavour.id}"] {`</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"></span>
+<span class="cl">  <span class="t-keyword-control">for</span> <span class="t-punctuation-bracket">(</span><span class="t-storage">const</span> <span class="t-punctuation-bracket">[</span><span class="t-variable">token</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">hex</span><span class="t-punctuation-bracket">]</span> <span class="t-keyword">of</span> <span class="t-type">Object</span><span class="t-punctuation">.</span><span class="t-function-method">entries</span><span class="t-punctuation-bracket">(</span><span class="t-variable">flavour</span><span class="t-punctuation">.</span><span class="t-variable-member">neutrals</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">    <span class="t-variable">lines</span><span class="t-punctuation">.</span><span class="t-function-method">push</span><span class="t-punctuation-bracket">(</span><span class="t-string">`  --n-${token}: ${hex};`</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-punctuation-bracket">}</span></span>
+<span class="cl">  <span class="t-keyword-control">for</span> <span class="t-punctuation-bracket">(</span><span class="t-storage">const</span> <span class="t-punctuation-bracket">[</span><span class="t-variable">token</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">hex</span><span class="t-punctuation-bracket">]</span> <span class="t-keyword">of</span> <span class="t-type">Object</span><span class="t-punctuation">.</span><span class="t-function-method">entries</span><span class="t-punctuation-bracket">(</span><span class="t-variable">flavour</span><span class="t-punctuation">.</span><span class="t-variable-member">accents</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">    <span class="t-variable">lines</span><span class="t-punctuation">.</span><span class="t-function-method">push</span><span class="t-punctuation-bracket">(</span><span class="t-string">`  --a-${token}: ${hex};`</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-punctuation-bracket">}</span></span>
+<span class="cl">  <span class="t-keyword-control">for</span> <span class="t-punctuation-bracket">(</span><span class="t-storage">const</span> <span class="t-punctuation-bracket">[</span><span class="t-variable">role</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">spec</span><span class="t-punctuation-bracket">]</span> <span class="t-keyword">of</span> <span class="t-type">Object</span><span class="t-punctuation">.</span><span class="t-function-method">entries</span><span class="t-punctuation-bracket">(</span><span class="t-variable">flavour</span><span class="t-punctuation">.</span><span class="t-variable-member">syntax</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">    <span class="t-storage">const</span> <span class="t-variable">safe</span> <span class="t-operator">=</span> <span class="t-variable">role</span><span class="t-punctuation">.</span><span class="t-function-method">replace</span><span class="t-punctuation-bracket">(</span><span class="t-operator">/</span>\<span class="t-punctuation">.</span><span class="t-operator">/</span><span class="t-variable">g</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"-"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">    <span class="t-variable">lines</span><span class="t-punctuation">.</span><span class="t-function-method">push</span><span class="t-punctuation-bracket">(</span><span class="t-string">`  --sy-${safe}: ${spec.color};`</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">    <span class="t-keyword-control">if</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">spec</span><span class="t-punctuation">.</span><span class="t-variable-member">style</span><span class="t-punctuation-bracket">)</span> <span class="t-variable">lines</span><span class="t-punctuation">.</span><span class="t-function-method">push</span><span class="t-punctuation-bracket">(</span><span class="t-string">`  --sy-${safe}-style: ${spec.style};`</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-punctuation-bracket">}</span></span>
+<span class="cl"></span>
+<span class="cl">  <span class="t-keyword-control">return</span> <span class="t-variable">lines</span><span class="t-punctuation">.</span><span class="t-function-method">concat</span><span class="t-punctuation-bracket">(</span><span class="t-string">"}"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">.</span><span class="t-function-method">join</span><span class="t-punctuation-bracket">(</span><span class="t-string">"</span><span class="t-string-escape">\n</span><span class="t-string">"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-comment-doc">/** Fails loudly rather than shipping an unreadable accent. */</span></span>
+<span class="cl"><span class="t-keyword-import">export</span> <span class="t-keyword">function</span> <span class="t-function">audit</span><span class="t-punctuation-bracket">(</span><span class="t-property">flavour</span><span class="t-punctuation">:</span> <span class="t-type">Flavour</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">:</span> <span class="t-type-builtin">void</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">  <span class="t-storage">const</span> <span class="t-variable">base</span> <span class="t-operator">=</span> <span class="t-variable">flavour</span><span class="t-punctuation">.</span><span class="t-variable-member">neutrals</span><span class="t-punctuation">.</span><span class="t-variable-member">base</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-storage">const</span> <span class="t-variable">dim</span> <span class="t-operator">=</span> <span class="t-type">Object</span><span class="t-punctuation">.</span><span class="t-function-method">entries</span><span class="t-punctuation-bracket">(</span><span class="t-variable">flavour</span><span class="t-punctuation">.</span><span class="t-variable-member">accents</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">    <span class="t-punctuation">.</span><span class="t-function-method">map</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">[</span><span class="t-variable">token</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">hex</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">=&gt;</span> <span class="t-punctuation-bracket">[</span><span class="t-variable">token</span><span class="t-punctuation-delimiter">,</span> <span class="t-function">contrast</span><span class="t-punctuation-bracket">(</span><span class="t-variable">hex</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">base</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">]</span> <span class="t-keyword">as</span> <span class="t-storage">const</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">    <span class="t-punctuation">.</span><span class="t-function-method">filter</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">[</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">ratio</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">=&gt;</span> <span class="t-variable">ratio</span> <span class="t-operator">&lt;</span> <span class="t-constant">CONTRAST_FLOOR</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl"></span>
+<span class="cl">  <span class="t-keyword-control">if</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">dim</span><span class="t-punctuation">.</span><span class="t-variable-member">length</span> <span class="t-operator">&gt;</span> <span class="t-number">0</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">    <span class="t-storage">const</span> <span class="t-variable">detail</span> <span class="t-operator">=</span> <span class="t-variable">dim</span><span class="t-punctuation">.</span><span class="t-function-method">map</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">[</span><span class="t-variable">t</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">r</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">=&gt;</span> <span class="t-string">`${t} at ${r.toFixed(2)}:1`</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">.</span><span class="t-function-method">join</span><span class="t-punctuation-bracket">(</span><span class="t-string">", "</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">    <span class="t-keyword-control">throw</span> <span class="t-keyword">new</span> <span class="t-constructor">RangeError</span><span class="t-punctuation-bracket">(</span><span class="t-string">`${flavour.name}: ${detail}`</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">;</span></span>
+<span class="cl">  <span class="t-punctuation-bracket">}</span></span>
+<span class="cl"><span class="t-punctuation-bracket">}</span></span></code></pre>
+        </div>
+      </div>
+      <div class="spanel" id="spec-python" role="tabpanel"
+           aria-labelledby="stab-python" hidden>
+        <div class="scroll-x">
+<pre class="code"><code><span class="cl"><span class="t-comment">#!/usr/bin/env python3</span></span>
+<span class="cl"><span class="t-comment-doc">"""Kier — emit one theme file per flavour from the palette and the mappings.</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-comment-doc">A port never hardcodes a hex. It reads a role out of ``mappings.json``,</span></span>
+<span class="cl"><span class="t-comment-doc">resolves it in ``kier.json``, and writes it back out in its own dialect.</span></span>
+<span class="cl"><span class="t-comment-doc">"""</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword-import">from</span> <span class="t-namespace">__future__</span> <span class="t-keyword-import">import</span> <span class="t-namespace">annotations</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword-import">import</span> <span class="t-namespace">json</span></span>
+<span class="cl"><span class="t-keyword-import">from</span> <span class="t-namespace">dataclasses</span> <span class="t-keyword-import">import</span> <span class="t-namespace">dataclass</span><span class="t-punctuation-delimiter">,</span> <span class="t-namespace">field</span></span>
+<span class="cl"><span class="t-keyword-import">from</span> <span class="t-namespace">pathlib</span> <span class="t-keyword-import">import</span> <span class="t-type">Path</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-constant">PALETTE</span> <span class="t-operator">=</span> <span class="t-constructor">Path</span><span class="t-punctuation-bracket">(</span><span class="t-string">"core/palette/kier.json"</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl"><span class="t-constant">MAPPINGS</span> <span class="t-operator">=</span> <span class="t-constructor">Path</span><span class="t-punctuation-bracket">(</span><span class="t-string">"core/palette/mappings.json"</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl"><span class="t-constant">CONTRAST_FLOOR</span> <span class="t-operator">=</span> <span class="t-number">5.0</span></span>
+<span class="cl"></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-attribute">@dataclass</span><span class="t-punctuation-bracket">(</span><span class="t-variable">frozen</span><span class="t-operator">=</span><span class="t-boolean">True</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">slots</span><span class="t-operator">=</span><span class="t-boolean">True</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl"><span class="t-storage">class</span> <span class="t-type">Role</span><span class="t-punctuation">:</span></span>
+<span class="cl">    <span class="t-variable">name</span><span class="t-punctuation">:</span> <span class="t-type-builtin">str</span></span>
+<span class="cl">    <span class="t-variable">color</span><span class="t-punctuation">:</span> <span class="t-type-builtin">str</span></span>
+<span class="cl">    <span class="t-variable">token</span><span class="t-punctuation">:</span> <span class="t-type-builtin">str</span></span>
+<span class="cl">    <span class="t-variable">style</span><span class="t-punctuation">:</span> <span class="t-type-builtin">str</span> <span class="t-operator">|</span> <span class="t-constant-builtin">None</span> <span class="t-operator">=</span> <span class="t-constant-builtin">None</span></span>
+<span class="cl">    <span class="t-variable">scopes</span><span class="t-punctuation">:</span> <span class="t-type-builtin">tuple</span><span class="t-punctuation-bracket">[</span><span class="t-type-builtin">str</span><span class="t-punctuation-delimiter">,</span> <span class="t-punctuation">.</span><span class="t-punctuation">.</span><span class="t-punctuation">.</span><span class="t-punctuation-bracket">]</span> <span class="t-operator">=</span> <span class="t-function">field</span><span class="t-punctuation-bracket">(</span><span class="t-variable">default</span><span class="t-operator">=</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl"></span>
+<span class="cl">    <span class="t-attribute">@property</span></span>
+<span class="cl">    <span class="t-keyword">def</span> <span class="t-function">is_alias</span><span class="t-punctuation-bracket">(</span><span class="t-variable-builtin">self</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-type-builtin">bool</span><span class="t-punctuation">:</span></span>
+<span class="cl">        <span class="t-keyword-control">return</span> <span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">name</span><span class="t-punctuation">.</span><span class="t-function-method">partition</span><span class="t-punctuation-bracket">(</span><span class="t-string">"."</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">[</span><span class="t-number">0</span><span class="t-punctuation-bracket">]</span> <span class="t-operator">!=</span> <span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">name</span></span>
+<span class="cl"></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-storage">class</span> <span class="t-type">ThemeWriter</span><span class="t-punctuation">:</span></span>
+<span class="cl">    <span class="t-comment-doc">"""Base class: subclass and override ``render`` for a new ecosystem."""</span></span>
+<span class="cl"></span>
+<span class="cl">    <span class="t-variable">ecosystem</span> <span class="t-operator">=</span> <span class="t-string">"textmate"</span></span>
+<span class="cl">    <span class="t-variable">extension</span> <span class="t-operator">=</span> <span class="t-string">".json"</span></span>
+<span class="cl"></span>
+<span class="cl">    <span class="t-keyword">def</span> <span class="t-function">__init__</span><span class="t-punctuation-bracket">(</span><span class="t-variable-builtin">self</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable-parameter">palette</span><span class="t-punctuation">:</span> <span class="t-type-builtin">dict</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable-parameter">mappings</span><span class="t-punctuation">:</span> <span class="t-type-builtin">dict</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-constant-builtin">None</span><span class="t-punctuation">:</span></span>
+<span class="cl">        <span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">palette</span> <span class="t-operator">=</span> <span class="t-variable">palette</span></span>
+<span class="cl">        <span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">scopes</span> <span class="t-operator">=</span> <span class="t-variable">mappings</span><span class="t-punctuation-bracket">[</span><span class="t-string">"ecosystems"</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-bracket">[</span><span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">ecosystem</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-bracket">[</span><span class="t-string">"map"</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl"></span>
+<span class="cl">    <span class="t-keyword">def</span> <span class="t-function">roles</span><span class="t-punctuation-bracket">(</span><span class="t-variable-builtin">self</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable-parameter">flavour</span><span class="t-punctuation">:</span> <span class="t-type-builtin">str</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-type-builtin">list</span><span class="t-punctuation-bracket">[</span><span class="t-type">Role</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation">:</span></span>
+<span class="cl">        <span class="t-variable">syntax</span> <span class="t-operator">=</span> <span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">palette</span><span class="t-punctuation-bracket">[</span><span class="t-string">"flavours"</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-bracket">[</span><span class="t-variable">flavour</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-bracket">[</span><span class="t-string">"syntax"</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl">        <span class="t-variable">out</span> <span class="t-operator">=</span> <span class="t-punctuation-bracket">[</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl">        <span class="t-keyword-control">for</span> <span class="t-variable">name</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">spec</span> <span class="t-keyword">in</span> <span class="t-variable">syntax</span><span class="t-punctuation">.</span><span class="t-function-method">items</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">:</span></span>
+<span class="cl">            <span class="t-variable">scopes</span> <span class="t-operator">=</span> <span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">scopes</span><span class="t-punctuation">.</span><span class="t-function-method">get</span><span class="t-punctuation-bracket">(</span><span class="t-variable">name</span><span class="t-punctuation-delimiter">,</span> <span class="t-punctuation-bracket">[</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">            <span class="t-keyword-control">if</span> <span class="t-function-builtin">isinstance</span><span class="t-punctuation-bracket">(</span><span class="t-variable">scopes</span><span class="t-punctuation-delimiter">,</span> <span class="t-type-builtin">str</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">:</span></span>
+<span class="cl">                <span class="t-variable">scopes</span> <span class="t-operator">=</span> <span class="t-punctuation-bracket">[</span><span class="t-variable">scopes</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl">            <span class="t-variable">out</span><span class="t-punctuation">.</span><span class="t-function-method">append</span><span class="t-punctuation-bracket">(</span></span>
+<span class="cl">                <span class="t-constructor">Role</span><span class="t-punctuation-bracket">(</span></span>
+<span class="cl">                    <span class="t-variable">name</span><span class="t-operator">=</span><span class="t-variable">name</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">                    <span class="t-variable">color</span><span class="t-operator">=</span><span class="t-variable">spec</span><span class="t-punctuation-bracket">[</span><span class="t-string">"color"</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">                    <span class="t-variable">token</span><span class="t-operator">=</span><span class="t-variable">spec</span><span class="t-punctuation-bracket">[</span><span class="t-string">"token"</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">                    <span class="t-variable">style</span><span class="t-operator">=</span><span class="t-variable">spec</span><span class="t-punctuation">.</span><span class="t-function-method">get</span><span class="t-punctuation-bracket">(</span><span class="t-string">"style"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">                    <span class="t-variable">scopes</span><span class="t-operator">=</span><span class="t-type-builtin">tuple</span><span class="t-punctuation-bracket">(</span><span class="t-variable">scopes</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span></span>
+<span class="cl">                <span class="t-punctuation-bracket">)</span></span>
+<span class="cl">            <span class="t-punctuation-bracket">)</span></span>
+<span class="cl">        <span class="t-keyword-control">return</span> <span class="t-variable">out</span></span>
+<span class="cl"></span>
+<span class="cl">    <span class="t-keyword">def</span> <span class="t-function">render</span><span class="t-punctuation-bracket">(</span><span class="t-variable-builtin">self</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable-parameter">flavour</span><span class="t-punctuation">:</span> <span class="t-type-builtin">str</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-type-builtin">str</span><span class="t-punctuation">:</span></span>
+<span class="cl">        <span class="t-keyword-control">raise</span> <span class="t-constructor">NotImplementedError</span><span class="t-punctuation-bracket">(</span><span class="t-string">f"</span><span class="t-string-special">{type(self).__name__}</span><span class="t-string"> must render </span><span class="t-string-special">{flavour!r}</span><span class="t-string">"</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl"></span>
+<span class="cl">    <span class="t-keyword">def</span> <span class="t-function">write_all</span><span class="t-punctuation-bracket">(</span><span class="t-variable-builtin">self</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable-parameter">out_dir</span><span class="t-punctuation">:</span> <span class="t-type">Path</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-constant-builtin">None</span><span class="t-punctuation">:</span></span>
+<span class="cl">        <span class="t-variable">out_dir</span><span class="t-punctuation">.</span><span class="t-function-method">mkdir</span><span class="t-punctuation-bracket">(</span><span class="t-variable">parents</span><span class="t-operator">=</span><span class="t-boolean">True</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">exist_ok</span><span class="t-operator">=</span><span class="t-boolean">True</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">        <span class="t-keyword-control">for</span> <span class="t-variable">flavour</span> <span class="t-keyword">in</span> <span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-variable-member">palette</span><span class="t-punctuation-bracket">[</span><span class="t-string">"flavours"</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation">:</span></span>
+<span class="cl">            <span class="t-variable">target</span> <span class="t-operator">=</span> <span class="t-variable">out_dir</span> <span class="t-operator">/</span> <span class="t-string">f"kier-</span><span class="t-string-special">{flavour}</span><span class="t-string-special">{self.extension}</span><span class="t-string">"</span></span>
+<span class="cl">            <span class="t-variable">target</span><span class="t-punctuation">.</span><span class="t-function-method">write_text</span><span class="t-punctuation-bracket">(</span><span class="t-variable-builtin">self</span><span class="t-punctuation">.</span><span class="t-function-method">render</span><span class="t-punctuation-bracket">(</span><span class="t-variable">flavour</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">encoding</span><span class="t-operator">=</span><span class="t-string">"utf-8"</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">            <span class="t-function-builtin">print</span><span class="t-punctuation-bracket">(</span><span class="t-string">f"  wrote </span><span class="t-string-special">{target}</span><span class="t-string">  (</span><span class="t-string-special">{target.stat().st_size:,}</span><span class="t-string"> bytes)"</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl"></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword">def</span> <span class="t-function">relative_luminance</span><span class="t-punctuation-bracket">(</span><span class="t-variable">hex_colour</span><span class="t-punctuation">:</span> <span class="t-type-builtin">str</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-type-builtin">float</span><span class="t-punctuation">:</span></span>
+<span class="cl">    <span class="t-variable">raw</span> <span class="t-operator">=</span> <span class="t-variable">hex_colour</span><span class="t-punctuation">.</span><span class="t-function-method">lstrip</span><span class="t-punctuation-bracket">(</span><span class="t-string">"#"</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">    <span class="t-variable">channels</span> <span class="t-operator">=</span> <span class="t-punctuation-bracket">(</span><span class="t-type-builtin">int</span><span class="t-punctuation-bracket">(</span><span class="t-variable">raw</span><span class="t-punctuation-bracket">[</span><span class="t-variable">i</span> <span class="t-punctuation">:</span> <span class="t-variable">i</span> <span class="t-operator">+</span> <span class="t-number">2</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-delimiter">,</span> <span class="t-number">16</span><span class="t-punctuation-bracket">)</span> <span class="t-operator">/</span> <span class="t-number">255</span> <span class="t-keyword-control">for</span> <span class="t-variable">i</span> <span class="t-keyword">in</span> <span class="t-punctuation-bracket">(</span><span class="t-number">0</span><span class="t-punctuation-delimiter">,</span> <span class="t-number">2</span><span class="t-punctuation-delimiter">,</span> <span class="t-number">4</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">    <span class="t-variable">linear</span> <span class="t-operator">=</span> <span class="t-punctuation-bracket">[</span><span class="t-variable">c</span> <span class="t-operator">/</span> <span class="t-number">12.92</span> <span class="t-keyword-control">if</span> <span class="t-variable">c</span> <span class="t-operator">&lt;=</span> <span class="t-number">0.04045</span> <span class="t-keyword-control">else</span> <span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">(</span><span class="t-variable">c</span> <span class="t-operator">+</span> <span class="t-number">0.055</span><span class="t-punctuation-bracket">)</span> <span class="t-operator">/</span> <span class="t-number">1.055</span><span class="t-punctuation-bracket">)</span> <span class="t-operator">**</span> <span class="t-number">2.4</span> <span class="t-keyword-control">for</span> <span class="t-variable">c</span> <span class="t-keyword">in</span> <span class="t-variable">channels</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl">    <span class="t-keyword-control">return</span> <span class="t-number">0.2126</span> <span class="t-operator">*</span> <span class="t-variable">linear</span><span class="t-punctuation-bracket">[</span><span class="t-number">0</span><span class="t-punctuation-bracket">]</span> <span class="t-operator">+</span> <span class="t-number">0.7152</span> <span class="t-operator">*</span> <span class="t-variable">linear</span><span class="t-punctuation-bracket">[</span><span class="t-number">1</span><span class="t-punctuation-bracket">]</span> <span class="t-operator">+</span> <span class="t-number">0.0722</span> <span class="t-operator">*</span> <span class="t-variable">linear</span><span class="t-punctuation-bracket">[</span><span class="t-number">2</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl"></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword">def</span> <span class="t-function">contrast</span><span class="t-punctuation-bracket">(</span><span class="t-variable">fg</span><span class="t-punctuation">:</span> <span class="t-type-builtin">str</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable-parameter">bg</span><span class="t-punctuation">:</span> <span class="t-type-builtin">str</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-type-builtin">float</span><span class="t-punctuation">:</span></span>
+<span class="cl">    <span class="t-variable">hi</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">lo</span> <span class="t-operator">=</span> <span class="t-function-builtin">sorted</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">(</span><span class="t-function">relative_luminance</span><span class="t-punctuation-bracket">(</span><span class="t-variable">fg</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span> <span class="t-function">relative_luminance</span><span class="t-punctuation-bracket">(</span><span class="t-variable">bg</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">reverse</span><span class="t-operator">=</span><span class="t-boolean">True</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">    <span class="t-keyword-control">return</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">hi</span> <span class="t-operator">+</span> <span class="t-number">0.05</span><span class="t-punctuation-bracket">)</span> <span class="t-operator">/</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">lo</span> <span class="t-operator">+</span> <span class="t-number">0.05</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl"></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword">def</span> <span class="t-function">main</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span> <span class="t-punctuation">-&gt;</span> <span class="t-type-builtin">int</span><span class="t-punctuation">:</span></span>
+<span class="cl">    <span class="t-variable">palette</span> <span class="t-operator">=</span> <span class="t-variable">json</span><span class="t-punctuation">.</span><span class="t-function-method">loads</span><span class="t-punctuation-bracket">(</span><span class="t-constant">PALETTE</span><span class="t-punctuation">.</span><span class="t-function-method">read_text</span><span class="t-punctuation-bracket">(</span><span class="t-variable">encoding</span><span class="t-operator">=</span><span class="t-string">"utf-8"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">    <span class="t-variable">mappings</span> <span class="t-operator">=</span> <span class="t-variable">json</span><span class="t-punctuation">.</span><span class="t-function-method">loads</span><span class="t-punctuation-bracket">(</span><span class="t-constant">MAPPINGS</span><span class="t-punctuation">.</span><span class="t-function-method">read_text</span><span class="t-punctuation-bracket">(</span><span class="t-variable">encoding</span><span class="t-operator">=</span><span class="t-string">"utf-8"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl"></span>
+<span class="cl">    <span class="t-keyword-control">for</span> <span class="t-variable">flavour_id</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">flavour</span> <span class="t-keyword">in</span> <span class="t-variable">palette</span><span class="t-punctuation-bracket">[</span><span class="t-string">"flavours"</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation">.</span><span class="t-function-method">items</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">:</span></span>
+<span class="cl">        <span class="t-variable">base</span> <span class="t-operator">=</span> <span class="t-variable">flavour</span><span class="t-punctuation-bracket">[</span><span class="t-string">"neutrals"</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation-bracket">[</span><span class="t-string">"base"</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl">        <span class="t-variable">dim</span> <span class="t-operator">=</span> <span class="t-punctuation-bracket">{</span></span>
+<span class="cl">            <span class="t-variable">token</span><span class="t-punctuation">:</span> <span class="t-function-builtin">round</span><span class="t-punctuation-bracket">(</span><span class="t-variable">ratio</span><span class="t-punctuation-delimiter">,</span> <span class="t-number">2</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">            <span class="t-keyword-control">for</span> <span class="t-variable">token</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">hex_colour</span> <span class="t-keyword">in</span> <span class="t-variable">flavour</span><span class="t-punctuation-bracket">[</span><span class="t-string">"accents"</span><span class="t-punctuation-bracket">]</span><span class="t-punctuation">.</span><span class="t-function-method">items</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">            <span class="t-keyword-control">if</span> <span class="t-punctuation-bracket">(</span><span class="t-variable">ratio</span> <span class="t-punctuation">:</span><span class="t-operator">=</span> <span class="t-function">contrast</span><span class="t-punctuation-bracket">(</span><span class="t-variable">hex_colour</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">base</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span> <span class="t-operator">&lt;</span> <span class="t-constant">CONTRAST_FLOOR</span></span>
+<span class="cl">        <span class="t-punctuation-bracket">}</span></span>
+<span class="cl">        <span class="t-keyword-control">if</span> <span class="t-variable">dim</span><span class="t-punctuation">:</span></span>
+<span class="cl">            <span class="t-keyword-control">raise</span> <span class="t-constructor">SystemExit</span><span class="t-punctuation-bracket">(</span><span class="t-string">f"</span><span class="t-string-special">{flavour['name']}</span><span class="t-string">: accents below floor -&gt; </span><span class="t-string-special">{dim}</span><span class="t-string">"</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">        <span class="t-function-builtin">print</span><span class="t-punctuation-bracket">(</span><span class="t-string">f"</span><span class="t-string-special">{flavour['name']:&lt;10}</span><span class="t-string"> </span><span class="t-string-special">{len(flavour['syntax'])}</span><span class="t-string"> roles, base </span><span class="t-string-special">{base}</span><span class="t-string">"</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl"></span>
+<span class="cl">    <span class="t-constructor">ThemeWriter</span><span class="t-punctuation-bracket">(</span><span class="t-variable">palette</span><span class="t-punctuation-delimiter">,</span> <span class="t-variable">mappings</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation">.</span><span class="t-function-method">write_all</span><span class="t-punctuation-bracket">(</span><span class="t-constructor">Path</span><span class="t-punctuation-bracket">(</span><span class="t-string">"dist"</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span></span>
+<span class="cl">    <span class="t-keyword-control">return</span> <span class="t-number">0</span></span>
+<span class="cl"></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-keyword-control">if</span> <span class="t-variable">__name__</span> <span class="t-operator">==</span> <span class="t-string">"__main__"</span><span class="t-punctuation">:</span></span>
+<span class="cl">    <span class="t-keyword-control">raise</span> <span class="t-constructor">SystemExit</span><span class="t-punctuation-bracket">(</span><span class="t-function">main</span><span class="t-punctuation-bracket">(</span><span class="t-punctuation-bracket">)</span><span class="t-punctuation-bracket">)</span></span></code></pre>
+        </div>
+      </div>
+      <div class="spanel" id="spec-toml" role="tabpanel"
+           aria-labelledby="stab-toml" hidden>
+        <div class="scroll-x">
+<pre class="code"><code><span class="cl"><span class="t-comment"># Kier Groove — Ghostty</span></span>
+<span class="cl"><span class="t-comment"># Generated from core/palette/kier.json. Do not edit by hand.</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-punctuation-bracket">[</span><span class="t-namespace">theme</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl"><span class="t-property">name</span> <span class="t-operator">=</span> <span class="t-string">"Kier Groove"</span></span>
+<span class="cl"><span class="t-property">reference</span> <span class="t-operator">=</span> <span class="t-string">"</span><span class="t-string-escape">\"</span><span class="t-string">Groove Is in the Heart</span><span class="t-string-escape">\"</span><span class="t-string"> (1990)"</span></span>
+<span class="cl"><span class="t-property">dark</span> <span class="t-operator">=</span> <span class="t-boolean">true</span></span>
+<span class="cl"><span class="t-property">version</span> <span class="t-operator">=</span> <span class="t-string">"1.0.0"</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-punctuation-bracket">[</span><span class="t-namespace">colors</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl"><span class="t-property">background</span> <span class="t-operator">=</span> <span class="t-string">"#1D2021"</span></span>
+<span class="cl"><span class="t-property">foreground</span> <span class="t-operator">=</span> <span class="t-string">"#EBDBB2"</span></span>
+<span class="cl"><span class="t-property">cursor-color</span> <span class="t-operator">=</span> <span class="t-string">"#FE8019"</span></span>
+<span class="cl"><span class="t-property">selection-background</span> <span class="t-operator">=</span> <span class="t-string">"#32302F"</span></span>
+<span class="cl"><span class="t-property">selection-foreground</span> <span class="t-operator">=</span> <span class="t-string">"#EBDBB2"</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-punctuation-bracket">[</span><span class="t-namespace">colors.palette</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl"><span class="t-comment"># black, red, green, yellow, blue, magenta, cyan, white</span></span>
+<span class="cl"><span class="t-property">normal</span> <span class="t-operator">=</span> <span class="t-punctuation-bracket">[</span><span class="t-string">"#32302F"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#CB7679"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#86C86A"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#DCAF56"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#6AACC8"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#CA72B0"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#6AC8B0"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#D7C7A4"</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl"><span class="t-property">bright</span> <span class="t-operator">=</span> <span class="t-punctuation-bracket">[</span><span class="t-string">"#3C3836"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#D48F91"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#9CD285"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#E2BD74"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#85BBD2"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#D48BBE"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#85D2BE"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"#EBDBB2"</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-punctuation-bracket">[</span><span class="t-namespace">font</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl"><span class="t-property">family</span> <span class="t-operator">=</span> <span class="t-string">"IBM Plex Mono"</span></span>
+<span class="cl"><span class="t-property">size</span> <span class="t-operator">=</span> <span class="t-number">13.5</span></span>
+<span class="cl"><span class="t-property">thicken</span> <span class="t-operator">=</span> <span class="t-boolean">false</span></span>
+<span class="cl"><span class="t-property">feature</span> <span class="t-operator">=</span> <span class="t-punctuation-bracket">[</span><span class="t-string">"-liga"</span><span class="t-punctuation-delimiter">,</span> <span class="t-string">"-calt"</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-punctuation-bracket">[</span><span class="t-namespace">window</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl"><span class="t-property">padding-x</span> <span class="t-operator">=</span> <span class="t-number">14</span></span>
+<span class="cl"><span class="t-property">padding-y</span> <span class="t-operator">=</span> <span class="t-number">10</span></span>
+<span class="cl"><span class="t-property">decoration</span> <span class="t-operator">=</span> <span class="t-string">"server"</span></span>
+<span class="cl"><span class="t-property">theme</span> <span class="t-operator">=</span> <span class="t-string">"dark"</span></span>
+<span class="cl"><span class="t-property">inherit-working-directory</span> <span class="t-operator">=</span> <span class="t-boolean">true</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-punctuation-bracket">[[</span><span class="t-namespace">keybind</span><span class="t-punctuation-bracket">]]</span></span>
+<span class="cl"><span class="t-property">trigger</span> <span class="t-operator">=</span> <span class="t-string">"ctrl+shift+t"</span></span>
+<span class="cl"><span class="t-property">action</span> <span class="t-operator">=</span> <span class="t-string">"new_tab"</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-punctuation-bracket">[[</span><span class="t-namespace">keybind</span><span class="t-punctuation-bracket">]]</span></span>
+<span class="cl"><span class="t-property">trigger</span> <span class="t-operator">=</span> <span class="t-string">"ctrl+shift+enter"</span></span>
+<span class="cl"><span class="t-property">action</span> <span class="t-operator">=</span> <span class="t-string">"new_split:right"</span></span>
+<span class="cl"></span>
+<span class="cl"><span class="t-punctuation-bracket">[</span><span class="t-namespace">audit</span><span class="t-punctuation-bracket">]</span></span>
+<span class="cl"><span class="t-comment"># Every accent clears this against `base`; validate.py is the gate.</span></span>
+<span class="cl"><span class="t-property">contrast-floor</span> <span class="t-operator">=</span> <span class="t-number">5.0</span></span>
+<span class="cl"><span class="t-property">min-perceptual-separation</span> <span class="t-operator">=</span> <span class="t-number">0.078</span></span></code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="legend-block">
+      <h3 class="grid-title">Hue assignment <span class="grid-note">which palette token carries which of the 58 roles</span></h3>
+      <ul class="hues">
+        <li class="hue-row">
+          <span class="hue-chip" style="background: var(--a-cherry)" aria-hidden="true"></span>
+          <code class="hue-token">cherry</code>
+          <span class="hue-count">2</span>
+          <span class="hue-roles"><code class="hue-role">diff.delete</code> <code class="hue-role">error</code></span>
+        </li>
+        <li class="hue-row">
+          <span class="hue-chip" style="background: var(--a-tangerine)" aria-hidden="true"></span>
+          <code class="hue-token">tangerine</code>
+          <span class="hue-count">9</span>
+          <span class="hue-roles"><code class="hue-role">keyword</code> <code class="hue-role">keyword.control</code> <code class="hue-role">keyword.import</code> <code class="hue-role">keyword.operator</code> <code class="hue-role">storage</code> <code class="hue-role">modifier</code> <code class="hue-role">tag</code> <code class="hue-role">markup.heading</code> <code class="hue-role">markup.list</code></span>
+        </li>
+        <li class="hue-row">
+          <span class="hue-chip" style="background: var(--a-amber)" aria-hidden="true"></span>
+          <code class="hue-token">amber</code>
+          <span class="hue-count">1</span>
+          <span class="hue-roles"><code class="hue-role">warning</code></span>
+        </li>
+        <li class="hue-row">
+          <span class="hue-chip" style="background: var(--a-brass)" aria-hidden="true"></span>
+          <code class="hue-token">brass</code>
+          <span class="hue-count">10</span>
+          <span class="hue-roles"><code class="hue-role">string.escape</code> <code class="hue-role">string.special</code> <code class="hue-role">function</code> <code class="hue-role">function.method</code> <code class="hue-role">function.builtin</code> <code class="hue-role">function.macro</code> <code class="hue-role">constructor</code> <code class="hue-role">attribute</code> <code class="hue-role">punctuation.special</code> <code class="hue-role">tag.attribute</code></span>
+        </li>
+        <li class="hue-row">
+          <span class="hue-chip" style="background: var(--a-moss)" aria-hidden="true"></span>
+          <code class="hue-token">moss</code>
+          <span class="hue-count">4</span>
+          <span class="hue-roles"><code class="hue-role">string</code> <code class="hue-role">character</code> <code class="hue-role">markup.code</code> <code class="hue-role">diff.add</code></span>
+        </li>
+        <li class="hue-row">
+          <span class="hue-chip" style="background: var(--a-lagoon)" aria-hidden="true"></span>
+          <code class="hue-token">lagoon</code>
+          <span class="hue-count">2</span>
+          <span class="hue-roles"><code class="hue-role">string.regex</code> <code class="hue-role">hint</code></span>
+        </li>
+        <li class="hue-row">
+          <span class="hue-chip" style="background: var(--a-denim)" aria-hidden="true"></span>
+          <code class="hue-token">denim</code>
+          <span class="hue-count">7</span>
+          <span class="hue-roles"><code class="hue-role">number</code> <code class="hue-role">boolean</code> <code class="hue-role">constant</code> <code class="hue-role">constant.builtin</code> <code class="hue-role">markup.link</code> <code class="hue-role">diff.change</code> <code class="hue-role">info</code></span>
+        </li>
+        <li class="hue-row">
+          <span class="hue-chip" style="background: var(--a-plum)" aria-hidden="true"></span>
+          <code class="hue-token">plum</code>
+          <span class="hue-count">4</span>
+          <span class="hue-roles"><code class="hue-role">variable.member</code> <code class="hue-role">property</code> <code class="hue-role">variable.builtin</code> <code class="hue-role">label</code></span>
+        </li>
+        <li class="hue-row">
+          <span class="hue-chip" style="background: var(--n-overlay1)" aria-hidden="true"></span>
+          <code class="hue-token">overlay1</code>
+          <span class="hue-count">3</span>
+          <span class="hue-roles"><code class="hue-role">comment</code> <code class="hue-role">comment.doc</code> <code class="hue-role">deprecated</code></span>
+        </li>
+        <li class="hue-row">
+          <span class="hue-chip" style="background: var(--n-overlay2)" aria-hidden="true"></span>
+          <code class="hue-token">overlay2</code>
+          <span class="hue-count">4</span>
+          <span class="hue-roles"><code class="hue-role">punctuation</code> <code class="hue-role">punctuation.bracket</code> <code class="hue-role">punctuation.delimiter</code> <code class="hue-role">markup.quote</code></span>
+        </li>
+        <li class="hue-row">
+          <span class="hue-chip" style="background: var(--n-text)" aria-hidden="true"></span>
+          <code class="hue-token">text</code>
+          <span class="hue-count">12</span>
+          <span class="hue-roles"><code class="hue-role">function.call</code> <code class="hue-role">function.method.call</code> <code class="hue-role">variable</code> <code class="hue-role">variable.parameter</code> <code class="hue-role">type</code> <code class="hue-role">type.builtin</code> <code class="hue-role">class</code> <code class="hue-role">interface</code> <code class="hue-role">namespace</code> <code class="hue-role">operator</code> <code class="hue-role">markup.bold</code> <code class="hue-role">markup.italic</code></span>
+        </li>
+      </ul>
+      <p class="legend-foot">
+        Some roles are <em>declared aliases</em> — 33 pairs that intentionally
+        share a colour, like <code>number</code> = <code>constant</code> = <code>boolean</code>
+        and <code>type</code> = <code>namespace</code>. They are not a bug and ports must not
+        "fix" them.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── story ───────────────────────────────────────────────────────────── -->
+<section class="section" id="story">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">The name</p>
+      <h2>Lady Miss Kier</h2>
+    </div>
+    <div class="prose">
+      <p>
+        Deee-Lite came out of New York in 1990 sounding like a party that had
+        already been going for a decade — house, funk, disco, hip-hop and a
+        bassline borrowed from Bootsy Collins himself. The person on the sleeve,
+        in the platform boots and the op-art catsuit, was Lady Miss Kier. She
+        did not just sing on those records; she art-directed every cover she
+        appeared on. Warm, loud, meticulously composed, and never once ugly.
+      </p>
+      <p>
+        That is the brief for a dark theme, more or less. So the flavours take
+        their names from her records:
+      </p>
+      <ul class="story-list">
+        <li><strong>Groove</strong> — <em>"Groove Is in the Heart"</em>, 1990. The
+          anthem. Hardest contrast in the set, purest orange, nothing held back.</li>
+        <li><strong>Clique</strong> — <em>World Clique</em>, 1990. The debut album.
+          Deep oxide over the darkest ground here.</li>
+        <li><strong>Dewdrop</strong> — <em>Dewdrops in the Garden</em>, 1994. Soft,
+          warm, fully resolved. The gentlest of the five.</li>
+        <li><strong>Infinity</strong> — <em>Infinity Within</em>, 1992. Cool grey
+          ground under a warm accent: contrast by temperature, not brightness.</li>
+        <li><strong>Runaway</strong> — <em>"Runaway"</em>, 1992. Colour runs from the
+          interface until only the signal is left lit.</li>
+      </ul>
+      <p class="story-tail">
+        No affiliation, no endorsement — just a debt acknowledged in the only
+        currency a theme has.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── craft ───────────────────────────────────────────────────────────── -->
+<section class="section section-alt" id="craft">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Design philosophy</p>
+      <h2>Four decisions, stated plainly</h2>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><span class="stat-n">5</span><span class="stat-l">flavours</span></div>
+      <div class="stat"><span class="stat-n">58</span><span class="stat-l">syntax roles</span></div>
+      <div class="stat"><span class="stat-n">33</span><span class="stat-l">declared aliases</span></div>
+      <div class="stat"><span class="stat-n">225</span><span class="stat-l">role bindings</span></div>
+      <div class="stat"><span class="stat-n">329</span><span class="stat-l">scope names</span></div>
+      <div class="stat"><span class="stat-n">19</span><span class="stat-l">ports</span></div>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Grounds are carried, not invented</h3>
+        <p>
+          The <code>base</code>, surface ramp, text ramp and signature accent of all
+          5 flavours come verbatim from five hand-tuned COSMIC desktop
+          themes. They were tuned by eye on a real desktop first; the theme
+          inherits them rather than re-deriving them. <code>validate.py</code> fails the
+          build if any of those anchors drift by a single digit.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Every accent clears 5.0:1 on its own base</h3>
+        <p>
+          Not a house average — a floor, checked per flavour against that
+          flavour's own ground. The tightest in the whole set is
+          <strong>5.0:1</strong>. Primary text runs
+          11.5:1 to 13.5:1. The practical
+          consequence: any of the 12 accents can carry a common
+          syntax role without a legibility argument.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Roles separate by OKLab distance, not WCAG contrast</h3>
+        <p>
+          WCAG contrast answers "can I read this on that background". It says
+          nothing about whether a keyword and an operator look like different
+          things. So separation is measured perceptually instead. 7 of the
+          12 accents crowd between 318° and 48°, and the
+          tightest non-aliased pair anywhere in the set —
+          <code>keyword</code> against <code>punctuation</code> in
+          Clique — sits at <strong>dE 0.056</strong> in OKLab.
+          Deliberately tight, and deliberately measured: <code>validate.py</code> is
+          the gate, and this page recomputes the same number at build time.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Aliases are declared, not accidental</h3>
+        <p>
+          33 role pairs share a colour on purpose:
+          <code>number</code>, <code>constant</code> and <code>boolean</code> are one idea;
+          so are <code>type</code> and <code>namespace</code>. Writing them down means the
+          separation check can skip them instead of flagging them, and means a
+          port author knows a collision is intent rather than an oversight.
+        </p>
+      </article>
+    </div>
+
+    <h3 class="grid-title">Ecosystem coverage <span class="grid-note">225 bindings across 6 vocabularies</span></h3>
+    <div class="scroll-x">
+      <table class="eco">
+        <thead>
+          <tr><th scope="col">vocabulary</th><th scope="col">roles</th><th scope="col">scopes</th><th scope="col">used by</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row"><code>textmate</code></th><td class="num">58</td><td class="num">131</td><td class="uses">vscode, bat, obsidian, fleet, sublime</td></tr>
+          <tr><th scope="row"><code>treesitter</code></th><td class="num">58</td><td class="num">61</td><td class="uses">nvim</td></tr>
+          <tr><th scope="row"><code>vim</code></th><td class="num">25</td><td class="num">37</td><td class="uses">nvim</td></tr>
+          <tr><th scope="row"><code>lsp</code></th><td class="num">21</td><td class="num">21</td><td class="uses">nvim, vscode</td></tr>
+          <tr><th scope="row"><code>jetbrains</code></th><td class="num">31</td><td class="num">43</td><td class="uses">jetbrains</td></tr>
+          <tr><th scope="row"><code>emacs</code></th><td class="num">32</td><td class="num">36</td><td class="uses">emacs</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="eco-foot">
+      A port generator reads a role from <code>mappings.json</code>, looks the colour up
+      in <code>kier.json</code>, and writes it out in its own format. That is the whole
+      pipeline. A port never hardcodes a hex — and neither does this page.
+    </p>
+  </div>
+</section>
+
+<!-- ── ports ───────────────────────────────────────────────────────────── -->
+<section class="section" id="ports">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Ports</p>
+      <h2>19 places to put it</h2>
+      <p class="lede">
+        All generated from the same palette file, all carrying all
+        5 flavours. Where a tool only supports one theme, it
+        ships Groove.
+      </p>
+    </div>
+      <div class="port-group">
+        <div class="port-group-head">
+          <h3 class="port-group-name">Editors</h3>
+          <p class="port-group-tag">Where the palette does most of its work.</p>
+          <span class="port-count">6</span>
+        </div>
+        <div class="port-grid">
+          <a class="port" href="https://github.com/kier/nvim">
+            <span class="port-name">Neovim</span>
+            <span class="port-desc">treesitter + LSP semantic tokens, all five flavours</span>
+            <span class="port-slug">kier/nvim</span>
+          </a>
+          <a class="port" href="https://github.com/kier/vscode">
+            <span class="port-name">VS Code</span>
+            <span class="port-desc">TextMate scopes and semantic highlighting</span>
+            <span class="port-slug">kier/vscode</span>
+          </a>
+          <a class="port" href="https://github.com/kier/emacs">
+            <span class="port-name">Emacs</span>
+            <span class="port-desc">font-lock and treesit faces, Emacs 29+</span>
+            <span class="port-slug">kier/emacs</span>
+          </a>
+          <a class="port" href="https://github.com/kier/jetbrains">
+            <span class="port-name">JetBrains</span>
+            <span class="port-desc">IntelliJ, PyCharm, GoLand, RustRover, the lot</span>
+            <span class="port-slug">kier/jetbrains</span>
+          </a>
+          <a class="port" href="https://github.com/kier/fleet">
+            <span class="port-name">Fleet</span>
+            <span class="port-desc">JetBrains&#x27; lightweight editor</span>
+            <span class="port-slug">kier/fleet</span>
+          </a>
+          <a class="port" href="https://github.com/kier/obsidian">
+            <span class="port-name">Obsidian</span>
+            <span class="port-desc">editor, reading view and code fences</span>
+            <span class="port-slug">kier/obsidian</span>
+          </a>
+        </div>
+      </div>
+      <div class="port-group">
+        <div class="port-group-head">
+          <h3 class="port-group-name">Terminal</h3>
+          <p class="port-group-tag">The prompt, the pager and everything piped through them.</p>
+          <span class="port-count">8</span>
+        </div>
+        <div class="port-grid">
+          <a class="port" href="https://github.com/kier/ghostty">
+            <span class="port-name">Ghostty</span>
+            <span class="port-desc">full ANSI 16 plus cursor and selection</span>
+            <span class="port-slug">kier/ghostty</span>
+          </a>
+          <a class="port" href="https://github.com/kier/bat">
+            <span class="port-name">bat</span>
+            <span class="port-desc">sublime-syntax themes for the better cat</span>
+            <span class="port-slug">kier/bat</span>
+          </a>
+          <a class="port" href="https://github.com/kier/btop">
+            <span class="port-name">btop</span>
+            <span class="port-desc">graphs, gauges and process table</span>
+            <span class="port-slug">kier/btop</span>
+          </a>
+          <a class="port" href="https://github.com/kier/fzf">
+            <span class="port-name">fzf</span>
+            <span class="port-desc">an env var per flavour, drop it in your shell rc</span>
+            <span class="port-slug">kier/fzf</span>
+          </a>
+          <a class="port" href="https://github.com/kier/starship">
+            <span class="port-name">Starship</span>
+            <span class="port-desc">prompt modules coloured by role, not by guess</span>
+            <span class="port-slug">kier/starship</span>
+          </a>
+          <a class="port" href="https://github.com/kier/tmux">
+            <span class="port-name">tmux</span>
+            <span class="port-desc">status line, panes, copy-mode</span>
+            <span class="port-slug">kier/tmux</span>
+          </a>
+          <a class="port" href="https://github.com/kier/zellij">
+            <span class="port-name">Zellij</span>
+            <span class="port-desc">KDL themes, one per flavour</span>
+            <span class="port-slug">kier/zellij</span>
+          </a>
+          <a class="port" href="https://github.com/kier/eza">
+            <span class="port-name">eza</span>
+            <span class="port-desc">LS_COLORS for the modern ls</span>
+            <span class="port-slug">kier/eza</span>
+          </a>
+        </div>
+      </div>
+      <div class="port-group">
+        <div class="port-group-head">
+          <h3 class="port-group-name">Desktop</h3>
+          <p class="port-group-tag">Grounds carried straight back to where they came from.</p>
+          <span class="port-count">2</span>
+        </div>
+        <div class="port-grid">
+          <a class="port" href="https://github.com/kier/cosmic">
+            <span class="port-name">COSMIC</span>
+            <span class="port-desc">the original five hand-tuned desktop themes</span>
+            <span class="port-slug">kier/cosmic</span>
+          </a>
+          <a class="port" href="https://github.com/kier/grub">
+            <span class="port-name">GRUB</span>
+            <span class="port-desc">the theme you see before anything else loads</span>
+            <span class="port-slug">kier/grub</span>
+          </a>
+        </div>
+      </div>
+      <div class="port-group">
+        <div class="port-group-head">
+          <h3 class="port-group-name">Browser</h3>
+          <p class="port-group-tag">For the other place you read text all day.</p>
+          <span class="port-count">3</span>
+        </div>
+        <div class="port-grid">
+          <a class="port" href="https://github.com/kier/firefox">
+            <span class="port-name">Firefox</span>
+            <span class="port-desc">chrome theme and userChrome tweaks</span>
+            <span class="port-slug">kier/firefox</span>
+          </a>
+          <a class="port" href="https://github.com/kier/chrome">
+            <span class="port-name">Chrome</span>
+            <span class="port-desc">packed extension per flavour</span>
+            <span class="port-slug">kier/chrome</span>
+          </a>
+          <a class="port" href="https://github.com/kier/darkreader">
+            <span class="port-name">Dark Reader</span>
+            <span class="port-desc">import a flavour, recolour the web</span>
+            <span class="port-slug">kier/darkreader</span>
+          </a>
+        </div>
+      </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-word">Kier</span>
+      <span class="footer-ver">v1.0.0</span>
+    </div>
+    <p class="footer-note">
+      Named for Lady Miss Kier of Deee-Lite. Not affiliated with, or endorsed by,
+      anyone who made those records. MIT licensed.
+    </p>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a href="https://github.com/kier/core">core</a>
+      <a href="https://github.com/kier/cosmic">cosmic</a>
+      <a href="https://github.com/kier/nvim">nvim</a>
+      <a href="https://github.com/kier/ghostty">ghostty</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>

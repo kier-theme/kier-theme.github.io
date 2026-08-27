@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" data-flavour="groove">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kier — a warm retro dark theme in five flavours</title>
+<meta name="description" content="Kier is a warm, retro dark theme in five flavours — Groove, Clique, Dewdrop, Infinity and Runaway — named for Lady Miss Kier of Deee-Lite. {{ROLE_COUNT}} syntax roles, {{PORT_COUNT}} ports, every accent above {{MIN_CONTRAST}}:1.">
+<meta name="color-scheme" content="dark">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="kier.css">
+<link rel="stylesheet" href="site.css">
+<script src="palette.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap topbar-inner">
+    <a class="brand" href="#top">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-word">Kier</span>
+    </a>
+
+    <div class="switcher" role="group" aria-label="Flavour">
+{{FLAVOUR_PILLS}}
+    </div>
+
+    <nav class="topnav" aria-label="Sections">
+      <a href="#palette">Palette</a>
+      <a href="#syntax">Syntax</a>
+      <a href="#story">Story</a>
+      <a href="#craft">Craft</a>
+      <a href="#ports">Ports</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ── hero ────────────────────────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <svg class="disc" viewBox="-140 -140 280 280" aria-hidden="true" focusable="false">
+    <g class="disc-spin">
+{{DISC_WEDGES}}
+    </g>
+  </svg>
+
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <p class="eyebrow">
+        <span class="eyebrow-dot" aria-hidden="true"></span>
+        {{FLAVOUR_COUNT}} flavours · {{ACCENT_COUNT}} accents · one palette file
+      </p>
+      <h1 class="hero-title">Kier</h1>
+      <p class="hero-sub">
+        A warm retro dark theme for people who look at text all day.
+        Grounds lifted from five hand-tuned desktop themes, an accent set with a
+        1970s vocabulary, and {{ROLE_COUNT}} syntax roles that hold together
+        because the numbers say so.
+      </p>
+      <p class="hero-now">
+        Now showing <strong class="hero-flavour" data-bind="name">Groove</strong>
+        — <span data-bind="reference">"Groove Is in the Heart" (1990)</span>.
+        <span class="hero-blurb" data-bind="blurb"></span>
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="#ports">Get a port <span aria-hidden="true">→</span></a>
+        <a class="btn btn-ghost" href="#palette">Read the palette</a>
+      </div>
+      <p class="hero-hint">
+        Press <kbd>1</kbd>–<kbd>{{FLAVOUR_COUNT}}</kbd> to change flavour.
+      </p>
+    </div>
+
+    <div class="hero-code">
+      <div class="win">
+        <div class="win-bar">
+          <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="win-title">{{HERO_FILE}}</span>
+          <span class="win-tag" data-bind="name">Groove</span>
+        </div>
+        <div class="scroll-x">
+<pre class="code code-hero"><code>{{HERO_CODE}}</code></pre>
+        </div>
+        <div class="win-status">
+          <span class="ws-mode">NORMAL</span>
+          <span class="ws-branch">kier/core</span>
+          <span class="ws-spacer"></span>
+          <span class="ws-meta" data-bind="contrastLine">text 12.0:1 on base</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── flavours ────────────────────────────────────────────────────────── -->
+<section class="section" id="flavours">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">The {{FLAVOUR_COUNT}}</p>
+      <h2>Same bones, five moods</h2>
+      <p class="lede">
+        Every flavour ships the same {{NEUTRAL_COUNT}} neutrals, {{ACCENT_COUNT}} accents
+        and {{ROLE_COUNT}} roles. What changes is the ground you sit them on and
+        how hard the signature accent pushes.
+      </p>
+    </div>
+    <div class="fcards">
+{{FLAVOUR_CARDS}}
+    </div>
+  </div>
+</section>
+
+<!-- ── palette ─────────────────────────────────────────────────────────── -->
+<section class="section" id="palette">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Palette</p>
+      <h2><span data-bind="name">Groove</span>, all {{NEUTRAL_COUNT}} + {{ACCENT_COUNT}} of it</h2>
+      <p class="lede">
+        Click any swatch to copy its hex. Accent ratios are measured against this
+        flavour's own <code>base</code> — every one of them clears
+        <strong>{{MIN_CONTRAST}}:1</strong>, which is why any accent is safe as code text.
+      </p>
+    </div>
+
+    <h3 class="grid-title">Neutrals <span class="grid-note">crust → text</span></h3>
+    <div class="swatches" id="neutral-grid"></div>
+
+    <h3 class="grid-title">Accents <span class="grid-note">1970s revival vocabulary</span></h3>
+    <div class="swatches" id="accent-grid"></div>
+
+    <h3 class="grid-title">ANSI 16 <span class="grid-note">terminal ports use this directly</span></h3>
+    <div class="ansi" id="ansi-grid"></div>
+  </div>
+</section>
+
+<!-- ── syntax ──────────────────────────────────────────────────────────── -->
+<section class="section section-alt" id="syntax">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Syntax</p>
+      <h2>Real code, real roles</h2>
+      <p class="lede">
+        Nothing below is a screenshot and nothing is hand-coloured. The samples
+        are tokenized at build time into the same {{ROLE_COUNT}} role names the ports
+        use, then painted from <code>kier.json</code>. Change flavour and it repaints.
+      </p>
+    </div>
+
+    <div class="spec">
+      <div class="stabs" role="tablist" aria-label="Language">
+{{SPECIMEN_TABS}}
+      </div>
+{{SPECIMEN_PANELS}}
+    </div>
+
+    <div class="legend-block">
+      <h3 class="grid-title">Hue assignment <span class="grid-note">which palette token carries which of the {{ROLE_COUNT}} roles</span></h3>
+      <ul class="hues">
+{{LEGEND}}
+      </ul>
+      <p class="legend-foot">
+        Some roles are <em>declared aliases</em> — {{ALIAS_COUNT}} pairs that intentionally
+        share a colour, like <code>number</code> = <code>constant</code> = <code>boolean</code>
+        and <code>type</code> = <code>namespace</code>. They are not a bug and ports must not
+        "fix" them.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── story ───────────────────────────────────────────────────────────── -->
+<section class="section" id="story">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">The name</p>
+      <h2>Lady Miss Kier</h2>
+    </div>
+    <div class="prose">
+      <p>
+        Deee-Lite came out of New York in 1990 sounding like a party that had
+        already been going for a decade — house, funk, disco, hip-hop and a
+        bassline borrowed from Bootsy Collins himself. The person on the sleeve,
+        in the platform boots and the op-art catsuit, was Lady Miss Kier. She
+        did not just sing on those records; she art-directed every cover she
+        appeared on. Warm, loud, meticulously composed, and never once ugly.
+      </p>
+      <p>
+        That is the brief for a dark theme, more or less. So the flavours take
+        their names from her records:
+      </p>
+      <ul class="story-list">
+        <li><strong>Groove</strong> — <em>"Groove Is in the Heart"</em>, 1990. The
+          anthem. Hardest contrast in the set, purest orange, nothing held back.</li>
+        <li><strong>Clique</strong> — <em>World Clique</em>, 1990. The debut album.
+          Deep oxide over the darkest ground here.</li>
+        <li><strong>Dewdrop</strong> — <em>Dewdrops in the Garden</em>, 1994. Soft,
+          warm, fully resolved. The gentlest of the five.</li>
+        <li><strong>Infinity</strong> — <em>Infinity Within</em>, 1992. Cool grey
+          ground under a warm accent: contrast by temperature, not brightness.</li>
+        <li><strong>Runaway</strong> — <em>"Runaway"</em>, 1992. Colour runs from the
+          interface until only the signal is left lit.</li>
+      </ul>
+      <p class="story-tail">
+        No affiliation, no endorsement — just a debt acknowledged in the only
+        currency a theme has.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── craft ───────────────────────────────────────────────────────────── -->
+<section class="section section-alt" id="craft">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Design philosophy</p>
+      <h2>Four decisions, stated plainly</h2>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><span class="stat-n">{{FLAVOUR_COUNT}}</span><span class="stat-l">flavours</span></div>
+      <div class="stat"><span class="stat-n">{{ROLE_COUNT}}</span><span class="stat-l">syntax roles</span></div>
+      <div class="stat"><span class="stat-n">{{ALIAS_COUNT}}</span><span class="stat-l">declared aliases</span></div>
+      <div class="stat"><span class="stat-n">{{BINDING_COUNT}}</span><span class="stat-l">role bindings</span></div>
+      <div class="stat"><span class="stat-n">{{SCOPE_COUNT}}</span><span class="stat-l">scope names</span></div>
+      <div class="stat"><span class="stat-n">{{PORT_COUNT}}</span><span class="stat-l">ports</span></div>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Grounds are carried, not invented</h3>
+        <p>
+          The <code>base</code>, surface ramp, text ramp and signature accent of all
+          {{FLAVOUR_COUNT}} flavours come verbatim from five hand-tuned COSMIC desktop
+          themes. They were tuned by eye on a real desktop first; the theme
+          inherits them rather than re-deriving them. <code>validate.py</code> fails the
+          build if any of those anchors drift by a single digit.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Every accent clears {{MIN_CONTRAST}}:1 on its own base</h3>
+        <p>
+          Not a house average — a floor, checked per flavour against that
+          flavour's own ground. The tightest in the whole set is
+          <strong>{{MIN_CONTRAST}}:1</strong>. Primary text runs
+          {{MIN_TEXT_CONTRAST}}:1 to {{MAX_TEXT_CONTRAST}}:1. The practical
+          consequence: any of the {{ACCENT_COUNT}} accents can carry a common
+          syntax role without a legibility argument.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Roles separate by OKLab distance, not WCAG contrast</h3>
+        <p>
+          WCAG contrast answers "can I read this on that background". It says
+          nothing about whether a keyword and an operator look like different
+          things. So separation is measured perceptually instead. {{WARM_COUNT}} of the
+          {{ACCENT_COUNT}} accents crowd between {{WARM_LO}}° and {{WARM_HI}}°, and the
+          tightest non-aliased pair anywhere in the set —
+          <code>{{MIN_DE_A}}</code> against <code>{{MIN_DE_B}}</code> in
+          {{MIN_DE_FLAVOUR}} — sits at <strong>dE {{MIN_DE}}</strong> in OKLab.
+          Deliberately tight, and deliberately measured: <code>validate.py</code> is
+          the gate, and this page recomputes the same number at build time.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Aliases are declared, not accidental</h3>
+        <p>
+          {{ALIAS_COUNT}} role pairs share a colour on purpose:
+          <code>number</code>, <code>constant</code> and <code>boolean</code> are one idea;
+          so are <code>type</code> and <code>namespace</code>. Writing them down means the
+          separation check can skip them instead of flagging them, and means a
+          port author knows a collision is intent rather than an oversight.
+        </p>
+      </article>
+    </div>
+
+    <h3 class="grid-title">Ecosystem coverage <span class="grid-note">{{BINDING_COUNT}} bindings across {{ECOSYSTEM_COUNT}} vocabularies</span></h3>
+    <div class="scroll-x">
+      <table class="eco">
+        <thead>
+          <tr><th scope="col">vocabulary</th><th scope="col">roles</th><th scope="col">scopes</th><th scope="col">used by</th></tr>
+        </thead>
+        <tbody>
+{{ECOSYSTEMS}}
+        </tbody>
+      </table>
+    </div>
+    <p class="eco-foot">
+      A port generator reads a role from <code>mappings.json</code>, looks the colour up
+      in <code>kier.json</code>, and writes it out in its own format. That is the whole
+      pipeline. A port never hardcodes a hex — and neither does this page.
+    </p>
+  </div>
+</section>
+
+<!-- ── ports ───────────────────────────────────────────────────────────── -->
+<section class="section" id="ports">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="kicker">Ports</p>
+      <h2>{{PORT_COUNT}} places to put it</h2>
+      <p class="lede">
+        All generated from the same palette file, all carrying all
+        {{FLAVOUR_COUNT}} flavours. Where a tool only supports one theme, it
+        ships Groove.
+      </p>
+    </div>
+{{PORTS}}
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-word">Kier</span>
+      <span class="footer-ver">v{{PALETTE_VERSION}}</span>
+    </div>
+    <p class="footer-note">
+      Named for Lady Miss Kier of Deee-Lite. Not affiliated with, or endorsed by,
+      anyone who made those records. MIT licensed.
+    </p>
+    <nav class="footer-links" aria-label="Elsewhere">
+      <a href="https://github.com/kier/core">core</a>
+      <a href="https://github.com/kier/cosmic">cosmic</a>
+      <a href="https://github.com/kier/nvim">nvim</a>
+      <a href="https://github.com/kier/ghostty">ghostty</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
