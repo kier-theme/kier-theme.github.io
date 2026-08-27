@@ -1,6 +1,6 @@
 # Kier — the website
 
-The canonical page for [Kier](https://github.com/kier/core), a warm retro dark
+The canonical page for [Kier](https://github.com/kier-theme/core), a warm retro dark
 theme in five flavours named for Lady Miss Kier of Deee-Lite.
 
 Static HTML, CSS and one vanilla JS file. No framework, no bundler, no CDN, and
@@ -194,7 +194,7 @@ committed HTML honest.
 ### Custom domain
 
 Add a `CNAME` file at the root containing the bare hostname, e.g.
-`kier.style`, then point a `CNAME` DNS record at `kier.github.io`. For an apex
+`kier.style`, then point a `CNAME` DNS record at `kier-theme.github.io`. For an apex
 domain use `A` records to GitHub's Pages IPs instead.
 
 ---

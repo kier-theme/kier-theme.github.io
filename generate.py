@@ -822,7 +822,7 @@ def frag_ports() -> str:
         cards = []
         for slug, name, desc in ports:
             cards.append(
-                f'''          <a class="port" href="https://github.com/kier/{slug}">
+                f'''          <a class="port" href="https://github.com/kier-theme/{slug}">
             <span class="port-name">{html.escape(name)}</span>
             <span class="port-desc">{html.escape(desc)}</span>
             <span class="port-slug">kier/{slug}</span>
